@@ -4,7 +4,7 @@ Diabetes, a chronic metabolic disorder, is one of the fastest growing disease re
 - Type 1 diabetes happens when the pancreatic beta cells produce either very little insulin or no insulin.
 - Type 2 dibetes happens when body become insulin resistance.
 
-The common symptoms for Type 1 diabetes are sudden weight loss, Dehydration, delayed healing, blurred vision and Type 2 have similar symptoms or no symptoms at all depends on body reaction. [1, 2]. Type 1 diabetes strikes both kids and adults at any age.There is no cure for Diabetes but it can be managed if it diagnose in early stage. Type 1 diabetes can be manged by medication and Type 2 can be manged by health diete, excercise and healthy life style. 
+The common symptoms for Type 1 diabetes are sudden weight loss, Dehydration, delayed healing, blurred vision and Type 2 have similar symptoms or no symptoms at all depends on body reaction. [1, 2]. Type 1 diabetes strikes both kids and adults at any age.There is no cure for Diabetes but it can be managed if it diagnose in early stage. Type 1 diabetes can be managed by medication and Type 2 can be managed by balanced diete, excercise and a healthy life style. 
 
 # Why we have selected "Prediction of Diabetes" topic
 

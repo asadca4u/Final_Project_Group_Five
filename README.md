@@ -11,7 +11,7 @@
 - This model is then used to make predictions using the testing data. 
 
 ### What is the model's accuracy?
-- The model's calculated accuracy score is 0.946, which means nearly 95% of the time, when given all 15 features as an input, the decision tree model will predict 95% of cases it encounters correctly. 
+- The model's calculated accuracy score is 0.946, which means nearly 95% of the time, when given all 15 features as an input, the decision tree model will classify cases it encounters correctly. 
 
 ### How does this model work?
 - A decision tree model works by generating a series of conditional statements that sequentially classify objects in either one category or another. 

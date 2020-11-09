@@ -21,7 +21,7 @@ The dataset contains a record of 16 attributes about each of 520 patients, which
 
 ![Table 2](https://user-images.githubusercontent.com/67460581/98498616-73073d80-2204-11eb-9160-cbed55bb1a2e.PNG)
 
-## Questions to answer with this data
+## Questions to Consider
 
 To what extent can a machine-learning model predict whether or not a patient is at risk of diabetes based on 16 different health and demographic attributes? Is such a model useful for classifying patients in a clinical setting so that preventative and if nescessary, therapeutic measures may be implemented?
 

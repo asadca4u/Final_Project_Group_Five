@@ -15,6 +15,8 @@ The common symptoms for Type I diabetes are sudden weight loss, Dehydration, del
 # Description of Data
 
 The dataset contains a record of 16 attributes about each of 520 patients, which may be correlated with their diabetic status, or "class". The data was collected from the patients in the Sylhet Diabetes Hospital of Sylhet, Bangladesh.
+![Table 1](https://user-images.githubusercontent.com/67460581/98498587-6551b800-2204-11eb-9d2d-b425945e8966.PNG)
+![Table 2](https://user-images.githubusercontent.com/67460581/98498616-73073d80-2204-11eb-9160-cbed55bb1a2e.PNG)
 
 # Questions to answer with this data
 

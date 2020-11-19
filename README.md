@@ -1,18 +1,32 @@
-## Machine Learning Model Blueprint
+## Extract, Transform and Load the Dataset
 
-### Which model did you choose and why?
-- As an initial test case, A decision tree model was used in order to predict instances of diabetes in patients, given 15 different features. This model was chosen for its ability to remain easily interpretable, despite the incredible complexity associated with such a high number of features. However, decision trees have a tendency to overfit data, so other models will be used comparitively to detect instances of overfitting. 
+### Extracting the Dataset:
+- The dataset was downloaded as a csv file from the University of California Irvine Machine Learning Repository, and can be seen below: 
 
-### How are you training your model?
-- First the dataset is separated into the features and the target. There are 15 features and one target, "class" which represents whether or not the person is classified as positive for diabetes. 
-- The model is trained by first splitting the full dataset into training and testing subsets using the train_test_split function in the Scikit Learn library.
-- These subsets are then scaled using the StandardScaler() function, in order to ensure that the inputs to the model are starndardized for more valid comparisons with other ML models. 
-- The DecisionTreeClassifier() function is then called and used to train the model to a decision tree. 
-- This model is then used to make predictions using the testing data. 
+![Dataset](https://github.com/asadca4u/Final_Project_Group_Five/blob/ETL/Images/1.png)
 
-### What is the model's accuracy?
-- The model's calculated accuracy score is 0.946, which means nearly 95% of the time, when given all 15 features as an input, the decision tree model will classify cases it encounters correctly. 
+- This dataset contains 520 rows and 17 columns:
+  - Two of the columns contain demographic information (gender and age). 
+  - Fourteen columns contain symptoms associated with Type II diabetes, each of which is encoded in a binary Yes/No.
+  - One column contains a classification of positive or negative for Type II diabetes (class).
+  
+- The CSV file was uploaded to an Amazon S3 bucket for easily avaliable access to the raw dataset. 
+- Using pandas, the CSV file was read into a dataframe (shown above), in order to set up for the transformation process. 
 
-### How does this model work?
-- A decision tree model works by generating a series of conditional statements that sequentially classify objects in either one category or another. 
+### Transforming the Dataset:
+- This dataset required minimal processing to ready it for input into machine learning models, it was already encoded in a categorical fashion, and so merely required a conversion of the Yes/No, Positive/Negative and Male/Female strings into integers 1 and 0. 
+- This was done using the LabelEncoder module in the SciKitLearn library, which was iterated over each column that required encoding using a for loop. 
 
+![Encoding](https://github.com/asadca4u/Final_Project_Group_Five/blob/ETL/Images/2.png)
+                 
+- This fully encoded dataset was divided into separate subsets contained in separate dataframes:
+  - The gender column was filtered to return two dataframes containing all the male (328 rows) and female (192 rows) data separately. 
+  - The age column was filtered to return three dataframes that contained separate generations as follows:
+    - Under 40 (144 rows)
+    - 40 - 60 (281 rows)
+    - Over 60 (95 rows)
+
+### Load the Dataset:
+- Finally, the six total dataframes were loaded into a PostgreSQL relational database, which is stored on an AWS server and communicates with the Python code using SQLAlchemy and an associated connection string. This is where the dataset will be stored statically for access later as it is required for the machine learning models. 
+
+![Load](https://github.com/asadca4u/Final_Project_Group_Five/blob/ETL/Images/3.png)

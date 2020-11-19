@@ -10,16 +10,16 @@ The common symptoms for Type I diabetes are sudden weight loss, Dehydration, del
 
 8.7% of males and 7.6% of females in Canada, equaling roughly three million individuals, had Type II diabetes in the year 2014 [4]. Nationally, in the year 2014, the incidence of new diabetes cases in the population was 5.9 out of every 1000 people [4]. Total health care costs resulting from diabetes in Canada is expected to increase to over $16.9 billion (CAD) anually by 2020. We would like to create a machine learning model that can correlationally predict whether or not an individual is at risk for Type II Diabetes based on a range of health features, in order to aid clinicians in preventing and treating the illness. 
 
-![Diabetes Canada](https://github.com/asadca4u/Final_Project_Group_Five/blob/Presentation/Diabetes%20Incidence%20Canada.png)
+![Diabetes Canada](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Diabetes%20Incidence%20Canada.png)
 
 ## Description of Data
 
 The dataset contains a record of 16 attributes about each of 520 patients, which may be correlated with their diabetic status, or "class". The data was collected from the patients in the Sylhet Diabetes Hospital of Sylhet, Bangladesh.
 
 
-![Table 1](https://user-images.githubusercontent.com/67460581/98498587-6551b800-2204-11eb-9d2d-b425945e8966.PNG)
+![Table 1](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Table%201.PNG)
 
-![Table 2](https://user-images.githubusercontent.com/67460581/98498616-73073d80-2204-11eb-9160-cbed55bb1a2e.PNG)
+![Table 2](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Table%202.PNG)
 
 ## Questions to Consider
 

@@ -1,4 +1,13 @@
-## Machine Learning Model Blueprint
+## Predicting instances of Type II Diabetes with Machine Learning and Neural Network
+
+- How does it work?
+- Why this specific model?
+- What is the model's accuracy?
+- If there are statistics involved, what stats are being included in analysis and why?
+- If no statistics are involved, what would you include if you had more time?
+
+
+
 
 ### Which model did you choose and why?
 - As an initial test case, A decision tree model was used in order to predict instances of diabetes in patients, given 15 different features. This model was chosen for its ability to remain easily interpretable, despite the incredible complexity associated with such a high number of features. However, decision trees have a tendency to overfit data, so other models will be used comparitively to detect instances of overfitting. 

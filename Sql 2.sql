@@ -138,6 +138,6 @@ CREATE TABLE generation_three (
   class varchar
 );
 
-);
+
 
 

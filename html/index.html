@@ -27,22 +27,72 @@
 
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md-4">
-                <h3>Predicting instances of Type II Diabetes with Machine Learning Models <small>Four different machine learning models are compared here in their ability to correctly classify instances of Type II Diabetes, based on 14 symptoms and 2 demographic identifiers as input features.</small></h3>
+              <div class="col-md-3">
+                <h3>Type II Diabetes with Machine Learning Models <small>Four different machine learning models are compared here in their ability to correctly classify instances of Type II Diabetes, based on 14 symptoms and 2 demographic identifiers as input features.</small></h3>
               </div>
-              <div class="col-md-8">
+              <div class="col-md-9">
                 <p>
                     Logistic Regression <br><br>A logistic regression makes predictions about binary outcomes, that is, whether or not a data point belongs in one of two categories, when compared to the rest of the dataset. The regression mathematically determines the probability that a novel data point belongs in a certain class, if the probability is above a certain threshold, then the sample is assigned to that class, otherwise it is assigned to the other class in the binary. In this project, we are attempting to classify individuals based on thier risk for Type II Diabetes, that is, they are either at risk or not at risk, and so a logistic regression model is ideal.<br><br>SVM<br><br>
 Support Vector Machines are also binary classifiers, much like logistic regressions, however unlike the sigmoid curve used in the logistic regression, the SVM is a linear classifier. As such, it generates a straight line that separates the two classes of data points and attempts to ensure that the line is as equally distant from the two subsets as possible. Support Vectors are the data points that are closest to the straight line that divides the subsets, these data points serve as decision boundaries for classification.<br><br>Decision Tree <br><br>
 Decision trees are structures that encode a series of true/false questions, which are themselves represented by a series of if/else statements. Observations about the individuals are used to form conclusions about where they ought to be classified. The answer to each true/false question will cumulate so that the ability of the tree to form an accurate conclusion increases. In this project, the answer to whether or not a person is at risk for Type II diabetes is rooted in the answers to the health symptom questions, which were presented to each patient as true/false statements. These answers are entered into the decision tree sequentially, until a conclusion is reached that classifies the individual patient as either at risk or not at risk.<br><br>Random Forest <br><br>
 Random forest is a form of ensemble learing, which combines multiple models, such as decision tree algorithms, to help increase the robustness, and decrease the variance of the model. Multiple algorithms independently learn from and make predictions about the dataset, with the final prediction of the entire model being based on accumulated predictions from each of the individual algorithms. These individual algorithms are considered weak learners, that on their own have very little predictive power, but when combined in multiples, can produce a very high predictive power. Random Forests in particular, combine many smaller decision trees which are individually built from a random subset of the whole set of features. In this project's case, each decision tree would take a randomly selected subset of symptoms and attempt to classify individual patients based on just that subset. A radom forest model works best with a large set of features as input, due to the wide variety of weak learners it can generate, the cumulative predictive power increases with the possible combinations of features. Random forest models are also highly robust against overfitting, as they apporach the classification problem from as many possible angles as possible, figuratively speaking, since each individual decision tree is trained on a different subset of data. This also allows us to easily gague the relative importance of each feature in predicting whether or not an individual should be classified as at risk or not at risk for Type II diabetes.
-    
+
     
                 </p>
               </div>
             </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-3">
+            
+                  </div>
+                  <div class="col-md-9">
+
+
+            
+                  </div>
+                </div>
+              </div> 
+              <form>
+                <p>Filter Search</p>
+              </form>
+              <ul class="list-group">
+            
+            </ul> 
+            <li class="list-group-item">
+            
+            </li>
+            <li class="list-group-item">
+            
+            </li>
+            <label for="Age">Age</label>  
+            <input type="text" placeholder="" id="integer" />
+
+            <th>Age</th>
+            <th>Gender</th>
+            <th>State</th>
+            <th>Polyuria</th>
+            <th>Polydipsia</th>
+            <th>sudden weight loss</th>
+            <th>weakness</th>
+            <th>Polyphagia</th>
+            <th>Genital thrush</th>
+            <th>visual blurring</th>
+            <th>Itching</th>
+            <th>Irritability</th>
+            <th>delayed healing</th>
+            <th>partial paresis</th>
+            <th>muscle stiffness</th>
+            <th>Alopecia</th>
+            <th>Obesity</th>
+            <th>class</th>
+            
           </div>
+
+          <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
         </div>
+        
     </body>    
 </body>
 </html>

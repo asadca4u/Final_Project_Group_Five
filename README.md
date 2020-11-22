@@ -59,7 +59,7 @@ To what extent can a machine-learning model predict whether or not a patient is 
     - 40 - 60 (281 rows)
     - Over 60 (95 rows)
 
-### Load the Dataset:
+### Loading the Dataset:
 - Finally, the six total dataframes were loaded into a PostgreSQL relational database, which is stored on an AWS server and communicates with the Python code using SQLAlchemy and an associated connection string. This is where the dataset will be stored statically for access later as it is required for the machine learning models. 
 
 ![Load](https://github.com/asadca4u/Final_Project_Group_Five/blob/ETL/Images/ETL3.png)

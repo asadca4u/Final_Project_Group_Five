@@ -43,12 +43,21 @@ The Accuracy score of a model is a measure of how many of its classification pre
 ![Accuracy](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Accuracy.png)
 
 #### Precision 
+Precision, also known as positive predictive value (PPV), is a measure of how reliable a positive classification is. It is calculated by taking the ratio of correct positive classifications to all positive classifications. That is, the amount of True Positive predictions divided by the total amount of Positive predictions (True Positive + False Positive). In this project, the PPV represents the degree to which the machine learning model is reliably able to classify patients who are actually at risk of diabetes, as at risk in its predictions. In this context, The more precise a machine learning model, the more likely it is to correctly calssify at risk patients. 
+- In the figure below, precision follows a similar pattern to accuracy scores discussed previously, in that the random forest model has the greatest mean precision, only really falling short in the over 60 category, in which logistic regression and SVM models have the best performance. 
+- As a result, we can conclude that based on the current dataset, the random forest model will most reliably classify patients who are actually at risk for diabetes, as at risk in its predictions. 
 
 ![Precision](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Precision.png)
 
 #### Sensitivity
+Sensitivity, also known as recall, is a measure of how many instances of a positive classification were actually correctly classified as positive. This is calculated by taking the ratio of correct positive classifications to the total amount of actual positives. That is, the amount of True Positive predictions divided by the sum of actual positives (True Positive + False Negative). In this project, the recall represents the liklihood that the model will accurately classify those individuals who actually have diabetes, as having diabetes. That is, sensitivity is a measure of how many people who actually had diabetes, were correctly diagnosed. 
+- In the figure below, once again we see that the random forest model has the highest mean sensitivity, as well as having the lowest variance across groups. 
 
 ![Sensitivity](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Sensitivity.png)
+
+
+#### Tradeoff between Sensitivity and Precision
+Within the context of our project, which seeks to generate a preliminary diagnosis for Type II diabetes, by classifying an individual as either at risk, or not at risk, based on a set of 16 features, sensitivity is the most important metric to consider. Since this is merely a preliminary screening tool, not something designed to replace the expertise and experience of clinicians, it is paramount that the model classify as many individuals who actually have diabetes, as being at risk for diabetes, so that further screening may take place for a final diagnosis. If they sensitivity is low, it may actually turn away patients who may in fact be at risk for diabetes, by giving them a classification of not at risk, ultimately proving to be counter productive to its intended purpose. Accuracy and precision are also important metrics to consider, since a low accuracy indicates a poorly functioning classifier and low precision indicates the model's unreliability in its positive classifications. However, within the context of our application, and its intended use, sensitivity is the most important metric to consider when selecting a machine learning model. 
 
 ### Importance of Features
 

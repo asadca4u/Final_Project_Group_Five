@@ -34,6 +34,17 @@ Random forest is a form of ensemble learing, which combines multiple models, suc
 - Finally, A confusion matrix, accuracy score and classification report are generated for each model's six datasets, including the five subsets listed above. 
 - For the Decision Tree Model and the Random Forest Model, importance of feature reports were also generated. 
 
-### Accuracy, Sensitivity and Precision 
+### Analysis of ML Models
+#### Accuracy
+
+![Accuracy](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Accuracy.png)
+
+#### Precision 
+
+![Precision](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Precision.png)
+
+#### Sensitivity
+
+![Sensitivity](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Sensitivity.png)
 
 ### Importance of Features

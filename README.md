@@ -61,7 +61,15 @@ Within the context of our project, which seeks to generate a preliminary diagnos
 
 ### Importance of Features
 Having recognized the random forest algorithm as the best performing model in this project, with the added benefit that it is robust against overfitting, unlike the decision tree algorithm, it can be chosen as the model we use to produce our calssification application. Random Forest also allows us to measure the importance of features, which is a relative measure of how much a given feature contributes to the final random forest model, in relation to the other input features. 
+- Polyuria is a condition where the body urinates more than usual and passes excessive or abnormally large amounts of urine each time you urinate. [5]
+- Polydipsia is a condition involving excessive thirst and is one of the initial symptoms of diabetes. It is also usually accompanied by temporary or prolonged dryness of the mouth. [5]
+- Alopecia is a condition that causes hair to fall out in small patches, which can be unnoticeable. The condition develops when the immune system attacks the hair follicles, resulting in hair loss.[5]
+- Polyphagia, also known as hyperphagia, is the medical term for excessive and persisting hunger. It differs from having an increased appetite as a result of physical exertion; while  hunger levels will return to normal after eating in those cases, polyphagia remains no matter how much food is consumed. [5]
+
+The importance of features is relatively consistent across groups, with Polyuria and Polydipsia being the top two in all groups except female only and over 60. Interestingly enough, the age of the patient and the presence of alopecia are more significant contributors to an accurate classification amongst female patients, while alopecia is a very minor predictor of male diabetic status, and age is still the third most important feature in predicting diabetes amongst men. In the over 60 category, polydipsia remains an important factor, while itching and delayed healing become important in the oldest generation. Overall, we have revealed is a clear distinction between the features that are most important to male and female patients when diagnosing diabetes, while also discovering a clear change in the symptoms that become most important with a progression in age. 
 
 ![Importance_1](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Feature%20Importance%201.png)
 
 ![Importance 2](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Feature%20Importance%202.png)
+
+[5] https://www.diabetes.co.uk/category/diagnosis/symptoms/

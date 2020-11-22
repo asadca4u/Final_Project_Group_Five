@@ -48,3 +48,7 @@ Four different machine learning models are compared here in their ability to cor
 ![Sensitivity](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Sensitivity.png)
 
 ### Importance of Features
+
+![Importance_1](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Feature%20Importance%201.png)
+
+![Importance 2](https://github.com/asadca4u/Final_Project_Group_Five/blob/ML_Models/Images/Feature%20Importance%202.png)

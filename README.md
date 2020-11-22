@@ -13,9 +13,7 @@ The common symptoms for Type I diabetes are sudden weight loss, dehydration, del
 ### Description of Data
 The dataset contains a record of 16 attributes about each of 520 patients, which may be correlated with their diabetic status, or "class". The data is entered as either "Yes" or "No" for each of the 14 health related factors, and is entered as "Positive" or "Negative" in its classification of whether or not the individual patient (represented by a single row) has diabetes.  The data was collected from the patients in the Sylhet Diabetes Hospital of Sylhet, Bangladesh.
 
-![Table 1](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Table%201.PNG)
-
-![Dataset](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/data.png)
+![Dataset](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Dataset.png)
 
 ### Questions to Consider
 To what extent can a machine-learning model predict whether or not a patient is at risk of diabetes based on 16 different health and demographic attributes? Is such a model useful for classifying patients in a clinical setting so that preventative and if nescessary, therapeutic measures may be implemented?

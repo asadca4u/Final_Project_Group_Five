@@ -31,6 +31,15 @@ To what extent can a machine-learning model predict whether or not a patient is 
 - A Google Colab Jupyter Notebook was used to import the dataset from the S3 bucket via the Pandas library, which is where the dataset was cleaned up and encoded using the Scikit Learn library, outputting the labels that will be used as input for our machine learning model. 
 - Once the dataset is processed and transformed, a connection was created between the Python code base in the Jupyter Notebook and the PostgreSQL database hosted on the AWS server, using SQLAlchemy.
 - This connection was used to push the final processed dataset into the database for static storage, and so that it may be accessed later to train and assess our machine learning models. 
+- SQLAlchemy is once again used in a Google Colab notebook, to import the dataset and five subsets from the PostgreSQL database in order to build the four machine learning models.
+- The Dashboard is created using a bootstrap framework in CSS, which is hosted in an HTML file, which itself connects to a javascript file that processes user input from the dashboard and pushes it to the database using Node.js. 
+- This novel user data is stored in the PostgreSQL database, and again pushed to the machine learning model using SQLAlchemy, so that the model may return a prediction for the user. 
+- This classification prediction is pushed back into the dashboard from the python based ML model using a Flask framework. 
+- The dashboard itself is hosted on and deployed via GitHub Pages. 
+
+
+![Communication Protocols](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Communication%20Protocols.png)
+
 
 ## Extract, Transform and Load
 ### Extracting the Dataset:

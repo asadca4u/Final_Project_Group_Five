@@ -7,7 +7,7 @@ The data set contains reports of diabetes related symptoms of 520 people.
 
 ![Dataset](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Dataset.png)
 
-## exploring the dataset 
+## Exploring the dataset 
 definition: data exploration is the initial steps in data analysis in which, used data visulization and techniques to describe data characteristics, such as, size, data type, rows and columns, in order to understand the nature of data
 data exploration tools:
 we used manual exploration to explore diabetes dataset. Jupyter notebook was used to write the script with help of Pandas and Python.

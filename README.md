@@ -6,7 +6,7 @@ Diabetes, a chronic metabolic disorder, is one of the fastest growing diseases r
 The common symptoms for Type I diabetes are sudden weight loss, dehydration, delayed healing, blurred vision and Type II have similar symptoms or no symptoms at all depending on each body's idiosyncratic reactions. [1, 2]. Type I diabetes strikes both kids and adults at any age, while Type II diabetes is generally seen later in life. There is no cure for diabetes but it can be managed if it is diagnosed in the early stages. Type I diabetes can be managed by medication such as insulin and Type II can be managed via a balanced diet, excercise and a healthy lifestyle. In this project, we will be dealing exclusively with data about Type II diabetic patients. 
 
 ### Why we have chosen "Prediction of Diabetes" as a topic
-8.7% of males and 7.6% of females in Canada, equaling roughly three million individuals, had Type II diabetes in the year 2014 [4]. Nationally, in the year 2014, the incidence of new diabetes cases in the population was 5.9 out of every 1000 people [4]. Total health care costs resulting from diabetes in Canada is expected to increase to over $16.9 billion (CAD) anually by 2020. We would like to create a machine learning model that can correlationally predict whether or not an individual is at risk for Type II Diabetes based on a range of health and demographic features, in order to aid clinicians in preventing and treating the illness. 
+8.7% of males and 7.6% of females in Canada, equaling roughly three million individuals, had Type II diabetes in the year 2014 [4]. Nationally, in the year 2014, the incidence of new diabetes cases in the population was 5.9 out of every 1000 people [4]. Total health care costs resulting from diabetes in Canada is expected to increase to over $16.9 billion (CAD) anually by 2020. We would like to create a machine learning model that can correlationally predict whether or not an individual is at risk for Type II Diabetes based on a range of health and demographic features, in order to aid clinicians in preventing and treating the illness.
 
 ![Diabetes Canada](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Diabetes%20Incidence%20Canada.png)
 
@@ -50,7 +50,7 @@ To what extent can a machine-learning model predict whether or not a patient is 
 
 ![Dataset](https://github.com/asadca4u/Final_Project_Group_Five/blob/ETL/Images/ETL1.png)
 
-- This dataset contains 520 rows and 17 columns:
+  - This dataset contains 520 rows and 17 columns:
   - Two of the columns contain demographic information (gender and age). 
   - Fourteen columns contain symptoms associated with Type II diabetes, each of which is encoded in a binary Yes/No.
   - One column contains a classification of positive or negative for Type II diabetes (class).
@@ -195,6 +195,4 @@ The JavaScript was used to create the script to connect the function for dropdow
 -	Function init () to initiate the dashboard
 -	Function buildCharts(age) to create the data for charts
 -	Plotly function to create analytical charts for diabetes dataset
-
-
 

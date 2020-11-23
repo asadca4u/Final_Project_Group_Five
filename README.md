@@ -162,10 +162,6 @@ The dashboard is a place to display the results of the analysis and to provide a
 Tools:
 D3 JavaScript, HTML elements, Plotly, and JavaScript.
 
-Data:
-![json](https://user-images.githubusercontent.com/67460581/99928017-a49ffe80-2d04-11eb-9301-cf27e21268de.PNG)
-
-
 The HTML elements to create index.HTML file and the interactive fields
 -	<head> to show the heading on top
 -	<class=” row> used to create the rows in the web page
@@ -173,7 +169,6 @@ The HTML elements to create index.HTML file and the interactive fields
 -	<class=” well”> used to create the drop-down menu
 -	<p> to add a paragraph about the Topic “Diabetes”
 -	<select> element to connect the function created in JavaScript.
-  
 
 The JavaScript was used to create the script to connect the function for dropdown menu and bar chart.
 -	D3.json method used to read diabetess.JSON file

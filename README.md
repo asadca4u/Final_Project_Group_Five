@@ -77,6 +77,9 @@ To what extent can a machine-learning model predict whether or not a patient is 
 ![Load](https://github.com/asadca4u/Final_Project_Group_Five/blob/ETL/Images/ETL3.png)
 
 ## Database
+The database is a relational database created using PostgreSQL, and hosted on Amazon Web Services (AWS). The database currently contains seven tables, as can be seen in the entity relation diagram (ERD). This database stores the static data that has been preprocessed and will be used as input for the machine learning models, it connects to the python code hosted in a Google Colab notebook using SQLAlchemy with a connection string thats leads to the specific AWS server, as can be seen in the ETL portion and summary of communication protocols. The database will also connect to the dashboard, whereby users input data on the dashboard, which is processed and pushed back the database. This novel user data can be used as input for the final machine learning model, in order to make predictions about the individual's diabetic status. The rows entered into the novel_user_input table are added to the all_data table using the SQL UNION function. 
+
+![ERD](https://github.com/asadca4u/Final_Project_Group_Five/blob/Database/Images/ERD.png)
 
 ## Machine Learning Models
 Four different machine learning models are compared here in their ability to correctly classify instances of Type II Diabetes, based on 14 symptoms and 2 demographic identifiers as input features.  

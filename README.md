@@ -1,8 +1,5 @@
-Created the Database to store the data that we got from the web with regard to type 2 Diabetes
-We used the Amazon Webservices and Postgre SQL to setup the database Engine 
+### Database
+The database is a relational database created using PostgreSQL, and hosted on Amazon Web Services (AWS). The database currently contains seven tables, as can be seen in the entity relation diagram (ERD). This database stores the static data that has been preprocessed and will be used as input for the machine learning models, it connects to the python code hosted in a Google Colab notebook using SQLAlchemy with a connection string thats leads to the specific AWS server, as can be seen in the ETL portion and summary of communication protocols. The database will also connect to the dashboard, whereby users input data on the dashboard, which is processed and pushed back the database. This novel user data can be used as input for the final machine learning model, in order to make predictions about the individual's diabetic status. The rows entered into the novel_user_input table are added to the all_data table using the SQL UNION function. 
+
 
 ![ERD](https://github.com/asadca4u/Final_Project_Group_Five/blob/Database/Images/ERD.png)
-![Postgre](https://github.com/asadca4u/Final_Project_Group_Five/blob/Database/Images/DataBase.png)
-We have the Primary key as the Age in the Tables
-We used linked the female_data and male_data using the gender
-Our Module has 7 tables created

@@ -184,7 +184,7 @@ The HTML elements to create index.HTML file and the interactive fields
 -	<class=” col-md-8”> to size the columns to fit in page
 -	<class=” well”> used to create the drop-down menu
 -	<p> to add a paragraph about the Topic “Diabetes”
--	<select> element to connect the function created in JavaScript 
+-	<select> element to connect the function created in JavaScript.
   
 
 The JavaScript was used to create the script to connect the function for dropdown menu and bar chart.

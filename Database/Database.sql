@@ -42,7 +42,7 @@ CREATE TABLE male_data
     "Alopecia" bigint,
     "Obesity" bigint,
     "class" bigint
-)
+);
 
 -- Table: female_data
 

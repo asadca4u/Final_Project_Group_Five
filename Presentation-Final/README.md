@@ -5,6 +5,40 @@ Diabetes, a chronic metabolic disorder, is one of the fastest growing disease re
 # Description of Data
 The data set contains reports of diabetes related symptoms of 520 people. 
 
+![Dataset](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Dataset.png)
+
+## exploring the dataset 
+definition: data exploration is the initial steps in data analysis in which, used data visulization and techniques to describe data characteristics, such as, size, data type, rows and columns, in order to understand the nature of data
+data exploration tools:
+we used manual exploration to explore diabetes dataset. Jupyter notebook was used to write the script with help of Pandas and Python.
+what data is available?
+Diabetes_df.columns to explore the columns in data set
+ 
+what type of data is available?
+Diabetes_df.dtypes to display the type of data for each column
+ 
+what data is missing?
+pandas "isnull" method to check if any data is missing. Used print statement to get sum of null values for each column and diabetes_df.dropna() to delete all null values if any existed.
+ 
+what data can be removed?
+Panadas ".dropna()" method can be used to remove null data between rows and columns.
+ 
+Duplicate data in rows and columns can be removed with Pandas ".drop_duplicates" method.
+
+Data analysis
+
+ 
+
+
+
+
+
+## References:
+1. https://www.diabetes.ca/en-CA/about-diabetes
+2. https://www.albertadiabetesfoundation.com/type-2-diabetes?gclid=CjwKCAiAqJn9BRB0EiwAJ1SztWQsJPkJ0cSmIA5_mo6FY-YJaOfQ3yL8lVYJY2vqKnNk5ba-Uz8mpRoC2YkQAvD_BwE
+3. https://www.jdrf.ca/who-we-are/type-1-diabetes/
+4. https://www.canada.ca/en/public-health/services/publications/diseases-conditions/diabetes-canada-highlights-chronic-disease-surveillance-system.html
+
 
 # References:
 1. https://www.diabetes.ca/en-CA/about-diabetes

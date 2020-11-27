@@ -1,3 +1,5 @@
+//const { Console } = require("console");
+
 function collect_data()
 {
     let age = document.getElementById("age").value;
@@ -156,30 +158,33 @@ function collect_data()
                     myRadioList[i].value = "";
                 }
         };
+        // Use an object constructor function to create an object to store all of the data returned from the HTML form
+        function Data() 
+            {
+                this.Age = age;
+                this.Gender = gender;
+                this.Polyuria = polyuria;
+                this.Polydipsia = polydipsia;
+                this.sudden_weight_loss = weight_loss;
+                this.weakness = weakness;
+                this.Polydipsia = polydipsia;
+                this.Genital_thrush = thrush;
+                this.visual_bluring = vision;
+                this.Itching = itching;
+                this.Irritability = irritability;
+                this.delayed_healing = healing;
+                this.partial_paresis = paresis;
+                this.muscle_stiffness = stiffness;
+                this.Alopecia = alopecia;
+                this.Obesity = overweight;
 
-    let data = {
-            Age: age,
-            Gender: gender,
-            Polyuria: polyuria,
-            Polydipsia: polydipsia,
-            sudden_weight_loss: weight_loss,
-            weakness: weakness,
-            Polyphagia: polyphagia, 
-            Genital_thrush: thrush,
-            visual_blurring: vision, 
-            Itching: itching,
-            Irritability: irritability,
-            delayed_healing: healing,
-            partial_paresis: paresis,
-            muscle_stiffness: stiffness,
-            Alopecia: alopecia,
-            Obesity: overweight
-        }
-    console.log(data);
-
-    var JSON = JSON.parse(data);
-    console.log(JSON);
-
+            }
+        let data = new Data(age, gender, polyuria, polydipsia, weight_loss, weakness, polyphagia, thrush, vision, itching, irritability, healing, paresis, stiffness, alopecia, overweight); 
+        //Display JS object
+        console.log (data);
+        // Convert JS object to JSON
+        let myJSON = JSON.stringify(data);
+        console.log(myJSON);
 
     // var BucketName = "diabetes-dataset";
     // var bucketRegion = "US East (Ohio) us-east-2";

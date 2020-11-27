@@ -1,6 +1,7 @@
 function collect_data()
 {
     let age = document.getElementById("age").value;
+    age = parseInt(age)
     console.log("Age: "+age)
 
     //import height and weight, calculate BMI then classify as overweight or not
@@ -18,12 +19,11 @@ function collect_data()
 
     //import gender and encode as a variable
     let male = document.getElementById("male");
-    let female = document.getElementById("female");
     let gender;
     if(male.checked==true)
-        gender = male.value;
+        gender = 1;
     else 
-        gender = female.value;
+        gender = 0;
     console.log("Gender: "+gender);
 
     //import polyuria and encode as a variable
@@ -34,9 +34,6 @@ function collect_data()
     else 
         polyuria = 0;
     console.log("Polyuria: "+polyuria);
-    document.getElementById("yes1").reset;
-    document.getElementById("no1").reset;
-
 
     //import polydipsia and encode as a variable
     let yes2 = document.getElementById("yes2");
@@ -158,5 +155,56 @@ function collect_data()
                 {
                     myRadioList[i].value = "";
                 }
+        };
+
+    let data = {
+            Age: age,
+            Gender: gender,
+            Polyuria: polyuria,
+            Polydipsia: polydipsia,
+            sudden_weight_loss: weight_loss,
+            weakness: weakness,
+            Polyphagia: polyphagia, 
+            Genital_thrush: thrush,
+            visual_blurring: vision, 
+            Itching: itching,
+            Irritability: irritability,
+            delayed_healing: healing,
+            partial_paresis: paresis,
+            muscle_stiffness: stiffness,
+            Alopecia: alopecia,
+            Obesity: overweight
         }
+    console.log(data);
+
+    var JSON = JSON.parse(data);
+    console.log(JSON);
+
+
+    // var BucketName = "diabetes-dataset";
+    // var bucketRegion = "US East (Ohio) us-east-2";
+    // var IdentityPoolId = "us-east-2_2Hq6mRygS";
+    
+    // AWS.config.update({
+    //     region: bucketRegion,
+    //     credentials: new AWS.CognitoIdentityCredentials({
+    //       IdentityPoolId: IdentityPoolId
+    //     })
+    //   });
+    
+    //   var s3 = new AWS.S3({
+    //     apiVersion: "2006-03-01",
+    //     params: { Bucket: BucketName }
+    //   });
+
+    // function object_to_S3()
+    // {
+    //     var params = {Bucket: BucketName, Key: 'key', Body: string, ACL: "public-read"};
+    //     s3.upload(params, function(err, data) {
+    //       console.log(err, data);
+    //     });
+    // }
+    
 }
+
+

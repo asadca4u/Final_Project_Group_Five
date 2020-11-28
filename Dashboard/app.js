@@ -1,5 +1,3 @@
-//const { Console } = require("console");
-
 function collect_data()
 {
     let age = document.getElementById("age").value;
@@ -161,22 +159,22 @@ function collect_data()
         // Use an object constructor function to create an object to store all of the data returned from the HTML form
         function Data() 
             {
-                this.Age = age;
-                this.Gender = gender;
-                this.Polyuria = polyuria;
-                this.Polydipsia = polydipsia;
-                this.sudden_weight_loss = weight_loss;
-                this.weakness = weakness;
-                this.Polydipsia = polydipsia;
-                this.Genital_thrush = thrush;
-                this.visual_bluring = vision;
-                this.Itching = itching;
-                this.Irritability = irritability;
-                this.delayed_healing = healing;
-                this.partial_paresis = paresis;
-                this.muscle_stiffness = stiffness;
-                this.Alopecia = alopecia;
-                this.Obesity = overweight;
+                this.Age = {0:age};
+                this.Gender = {0:gender};
+                this.Polyuria = {0:polyuria};
+                this.Polydipsia = {0:polydipsia};
+                this.sudden_weight_loss = {0:weight_loss};
+                this.weakness = {0:weakness};
+                this.Polydipsia = {0:polydipsia};
+                this.Genital_thrush = {0:thrush};
+                this.visual_bluring = {0:vision};
+                this.Itching = {0:itching};
+                this.Irritability = {0:irritability};
+                this.delayed_healing = {0:healing};
+                this.partial_paresis = {0:paresis};
+                this.muscle_stiffness = {0:stiffness};
+                this.Alopecia = {0:alopecia};
+                this.Obesity = {0:overweight};
 
             }
         let data = new Data(age, gender, polyuria, polydipsia, weight_loss, weakness, polyphagia, thrush, vision, itching, irritability, healing, paresis, stiffness, alopecia, overweight); 
@@ -185,31 +183,42 @@ function collect_data()
         // Convert JS object to JSON
         let myJSON = JSON.stringify(data);
         console.log(myJSON);
+    
 
-    // var BucketName = "diabetes-dataset";
-    // var bucketRegion = "US East (Ohio) us-east-2";
-    // var IdentityPoolId = "us-east-2_2Hq6mRygS";
+    // Initialize the Amazon Cognito credentials provider
+    AWS.config.region = 'us-east-2'; // Region
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials(
+        {
+            IdentityPoolId:"us-east-2:c9eae278-0fab-4455-b468-df4545798580"
+            //'us-east-2:c9eae278-0fab-4455-b468-df4545798580',
+        });
     
-    // AWS.config.update({
-    //     region: bucketRegion,
-    //     credentials: new AWS.CognitoIdentityCredentials({
-    //       IdentityPoolId: IdentityPoolId
-    //     })
-    //   });
-    
-    //   var s3 = new AWS.S3({
-    //     apiVersion: "2006-03-01",
-    //     params: { Bucket: BucketName }
-    //   });
+      
+    var params = 
+        {
+            Bucket: "arn:aws:s3:us-east-2:767569721824:accesspoint/diabetes-data-ap", 
+            Body: myJSON, 
+            ACL: "public-read", 
+            Key: "diabetes",
+            ContentType: "application/json; charset=utf-8"
+        };
 
-    // function object_to_S3()
-    // {
-    //     var params = {Bucket: BucketName, Key: 'key', Body: string, ACL: "public-read"};
-    //     s3.upload(params, function(err, data) {
-    //       console.log(err, data);
-    //     });
-    // }
-    
+
+    // Use S3 ManagedUpload class as it supports multipart uploads
+    var upload = new AWS.S3.ManagedUpload({
+        params: params
+    });
+        
+    var promise = upload.promise();
+
+    promise.then(
+        function(data) {
+          alert("Successfully uploaded file.");
+        },
+        function(err) {
+          return alert("There was an error uploading your file: ", err.message);
+        }
+      );
 }
 
 

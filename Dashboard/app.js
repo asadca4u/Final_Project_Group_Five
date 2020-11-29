@@ -165,7 +165,7 @@ function collect_data()
                 this.Polydipsia = {0:polydipsia};
                 this.sudden_weight_loss = {0:weight_loss};
                 this.weakness = {0:weakness};
-                this.Polydipsia = {0:polydipsia};
+                this.Polyphagia = {0:polyphagia};
                 this.Genital_thrush = {0:thrush};
                 this.visual_bluring = {0:vision};
                 this.Itching = {0:itching};

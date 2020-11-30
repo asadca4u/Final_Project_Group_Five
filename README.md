@@ -153,25 +153,29 @@ The HTML elements to create index.HTML file and the interactive fields
 -	<select> element to connect the function created in JavaScript.
   
   
+  
+  
 #### References
 
-[1] https://www.diabetes.ca/en-CA/about-diabetes
+[1] https://www.diabetes.ca/en-CA/about-diabetes.
 
 
-[2] https://www.albertadiabetesfoundation.com/type-2-diabetes?gclid=CjwKCAiAqJn9BRB0EiwAJ1SztWQsJPkJ0cSmIA5_mo6FY-YJaOfQ3yL8lVYJY2vqKnNk5ba-Uz8mpRoC2YkQAvD_BwE
+[2] https://www.albertadiabetesfoundation.com/type-2-diabetes?gclid=CjwKCAiAqJn9BRB0EiwAJ1SztWQsJPkJ0cSmIA5_mo6FY-YJaOfQ3yL8lVYJY2vqKnNk5ba-Uz8mpRoC2YkQAvD_BwE.
 
 
-[3] https://www.jdrf.ca/who-we-are/type-1-diabetes/
+[3] https://www.jdrf.ca/who-we-are/type-1-diabetes/.
 
 
-[4] https://www.canada.ca/en/public-health/services/publications/diseases-conditions/diabetes-canada-highlights-chronic-disease-surveillance-system.html
+[4] https://www.canada.ca/en/public-health/services/publications/diseases-conditions/diabetes-canada-highlights-chronic-disease-surveillance-system.html.
 
 
-[5] https://www.diabetes.co.uk/category/diagnosis/symptoms/
+[5] https://www.diabetes.co.uk/category/diagnosis/symptoms/.
 
   
   
   
-  ## Here is link for google slides
-  https://docs.google.com/presentation/d/1YGDOCTAkfTfM0VePJZZyJXRTV5fqOcid8A-qVAKfu1Y/edit?usp=sharing
+  ## Here is link for google slides:
+  
+  
+  https://docs.google.com/presentation/d/1YGDOCTAkfTfM0VePJZZyJXRTV5fqOcid8A-qVAKfu1Y/edit?usp=sharing.
 

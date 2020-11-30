@@ -145,33 +145,25 @@ The JavaScript was used to create the script to connect the function for dropdow
 -	Plotly function to create analytical charts for diabetes dataset
 
 The HTML elements to create index.HTML file and the interactive fields
--	<head> to show the heading on top
--	<class=” row> used to create the rows in the web page
--	<class=” col-md-8”> to size the columns to fit in page
--	<class=” well”> used to create the drop-down menu
--	<p> to add a paragraph about the Topic “Diabetes”
--	<select> element to connect the function created in JavaScript.
+-	`<head>` to show the heading on top
+-	`<class=” row>` used to create the rows in the web page
+-	`<class=” col-md-8”>` to size the columns to fit in page
+-	`<class=” well”>` used to create the drop-down menu
+-	`<p>` to add a paragraph about the Topic “Diabetes”
+-	`<select>` element to connect the function created in JavaScript.
   
----------------------------------------------------------------------------------------------  
    
-# References
 
-[1] https://www.diabetes.ca/en-CA/about-diabetes.
+## References
 
-
-[2] https://www.albertadiabetesfoundation.com/type-2-diabetes?gclid=CjwKCAiAqJn9BRB0EiwAJ1SztWQsJPkJ0cSmIA5_mo6FY-YJaOfQ3yL8lVYJY2vqKnNk5ba-Uz8mpRoC2YkQAvD_BwE.
-
-
-[3] https://www.jdrf.ca/who-we-are/type-1-diabetes/.
-
-
-[4] https://www.canada.ca/en/public-health/services/publications/diseases-conditions/diabetes-canada-highlights-chronic-disease-surveillance-system.html.
-
-
-[5] https://www.diabetes.co.uk/category/diagnosis/symptoms/.
+1. https://www.diabetes.ca/en-CA/about-diabetes.
+2. https://www.albertadiabetesfoundation.com/type-2-diabetes?gclid=CjwKCAiAqJn9BRB0EiwAJ1SztWQsJPkJ0cSmIA5_mo6FY-YJaOfQ3yL8lVYJY2vqKnNk5ba-Uz8mpRoC2YkQAvD_BwE.
+3. https://www.jdrf.ca/who-we-are/type-1-diabetes/.
+4. https://www.canada.ca/en/public-health/services/publications/diseases-conditions/diabetes-canada-highlights-chronic-disease-surveillance-system.html.
+5. https://www.diabetes.co.uk/category/diagnosis/symptoms/.
 
   
-# Here is link for google slides:
+## Here is link for google slides:
   
   
 https://docs.google.com/presentation/d/1YGDOCTAkfTfM0VePJZZyJXRTV5fqOcid8A-qVAKfu1Y/edit?usp=sharing.

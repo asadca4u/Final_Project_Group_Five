@@ -19,31 +19,6 @@ The dataset contains a record of 16 attributes about each of 520 patients, which
 To what extent can a machine-learning model predict whether or not a patient is at risk of diabetes based on 16 different health and demographic attributes? Is such a model useful for classifying patients in a clinical setting so that preventative and if nescessary, therapeutic measures may be implemented?
 
 
-#### References
-[1] https://www.diabetes.ca/en-CA/about-diabetes
-
-[2] https://www.albertadiabetesfoundation.com/type-2-diabetes?gclid=CjwKCAiAqJn9BRB0EiwAJ1SztWQsJPkJ0cSmIA5_mo6FY-YJaOfQ3yL8lVYJY2vqKnNk5ba-Uz8mpRoC2YkQAvD_BwE
-
-[3] https://www.jdrf.ca/who-we-are/type-1-diabetes/
-
-[4] https://www.canada.ca/en/public-health/services/publications/diseases-conditions/diabetes-canada-highlights-chronic-disease-surveillance-system.html
-
-## Summary of Communication Protocols 
-- In this project, we first began by sourcing the dataset from the University of California machine learning repository as a CSV file, which was subsequently hosted in a S3 bucket. 
-- AWS RDS was used to host a PostgreSQL database, which would hold the static dataset after it was processed and tranformed for the purposes of our machine learning model. 
-- A Google Colab Jupyter Notebook was used to import the dataset from the S3 bucket via the Pandas library, which is where the dataset was cleaned up and encoded using the Scikit Learn library, outputting the labels that will be used as input for our machine learning model. 
-- Once the dataset is processed and transformed, a connection was created between the Python code base in the Jupyter Notebook and the PostgreSQL database hosted on the AWS server, using SQLAlchemy.
-- This connection was used to push the final processed dataset into the database for static storage, and so that it may be accessed later to train and assess our machine learning models. 
-- SQLAlchemy is once again used in a Google Colab notebook, to import the dataset and five subsets from the PostgreSQL database in order to build the four machine learning models.
-- The Dashboard is created using a bootstrap framework in CSS, which is hosted in an HTML file, which itself connects to a javascript file that processes user input from the dashboard and pushes it to the database using Node.js. 
-- This novel user data is stored in the PostgreSQL database, and again pushed to the machine learning model using SQLAlchemy, so that the model may return a prediction for the user. 
-- This classification prediction is pushed back into the dashboard from the python based ML model using a Flask framework. 
-- The dashboard itself is hosted on and deployed via GitHub Pages. 
-
-
-![Communication Protocols](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Communication%20Protocols.png)
-
-
 ## Extract, Transform and Load
 ### Extracting the Dataset:
 - The dataset was downloaded as a csv file from the University of California Irvine Machine Learning Repository, and can be seen below: 
@@ -176,4 +151,19 @@ The HTML elements to create index.HTML file and the interactive fields
 -	<class=” well”> used to create the drop-down menu
 -	<p> to add a paragraph about the Topic “Diabetes”
 -	<select> element to connect the function created in JavaScript.
+  
+  
+#### References
+[1] https://www.diabetes.ca/en-CA/about-diabetes
+
+[2] https://www.albertadiabetesfoundation.com/type-2-diabetes?gclid=CjwKCAiAqJn9BRB0EiwAJ1SztWQsJPkJ0cSmIA5_mo6FY-YJaOfQ3yL8lVYJY2vqKnNk5ba-Uz8mpRoC2YkQAvD_BwE
+
+[3] https://www.jdrf.ca/who-we-are/type-1-diabetes/
+
+[4] https://www.canada.ca/en/public-health/services/publications/diseases-conditions/diabetes-canada-highlights-chronic-disease-surveillance-system.html
+
+[5] https://www.diabetes.co.uk/category/diagnosis/symptoms/
+  
+  here is link for google slides
+  https://docs.google.com/presentation/d/1YGDOCTAkfTfM0VePJZZyJXRTV5fqOcid8A-qVAKfu1Y/edit?usp=sharing
 

@@ -153,9 +153,8 @@ The HTML elements to create index.HTML file and the interactive fields
 -	<select> element to connect the function created in JavaScript.
   
   
-  
-  
-#### References
+   
+# References
 
 [1] https://www.diabetes.ca/en-CA/about-diabetes.
 
@@ -174,7 +173,7 @@ The HTML elements to create index.HTML file and the interactive fields
   
   
   
-  ## Here is link for google slides:
+  # Here is link for google slides:
   
   
   https://docs.google.com/presentation/d/1YGDOCTAkfTfM0VePJZZyJXRTV5fqOcid8A-qVAKfu1Y/edit?usp=sharing.

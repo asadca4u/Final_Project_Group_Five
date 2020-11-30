@@ -152,7 +152,7 @@ The HTML elements to create index.HTML file and the interactive fields
 -	<p> to add a paragraph about the Topic “Diabetes”
 -	<select> element to connect the function created in JavaScript.
   
-  
+---------------------------------------------------------------------------------------------  
    
 # References
 
@@ -171,10 +171,8 @@ The HTML elements to create index.HTML file and the interactive fields
 [5] https://www.diabetes.co.uk/category/diagnosis/symptoms/.
 
   
+# Here is link for google slides:
   
   
-  # Here is link for google slides:
-  
-  
-  https://docs.google.com/presentation/d/1YGDOCTAkfTfM0VePJZZyJXRTV5fqOcid8A-qVAKfu1Y/edit?usp=sharing.
+https://docs.google.com/presentation/d/1YGDOCTAkfTfM0VePJZZyJXRTV5fqOcid8A-qVAKfu1Y/edit?usp=sharing.
 

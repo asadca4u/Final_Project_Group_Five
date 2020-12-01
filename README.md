@@ -163,7 +163,7 @@ The dashboard is a place to display the results of the analysis and to provide a
             - The prediction from the machine learning model, as well as its analysis of features was uploaded to a second S3 bucket in the second lambda function as JSON files.
             - These JSON files are downloaded by the script in the dashboard, using a fetch(url) function and are then displayed by the dashboard, in their raw JSON form. 
 
-![Dashboard](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Dashboard.png)
+![Dashboard](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Dashboard1.png)
 
 ## References
 

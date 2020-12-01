@@ -263,12 +263,6 @@ async function render_results(url)
 
 }
 
-
-
-
-
-
-
 // Fetch the analysis of features
 async function fetch_features(url1) 
 {
@@ -293,19 +287,7 @@ async function render_features(url1)
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Set up timer function
 function startTimer(duration) {
     var timer = duration, minutes, seconds;
     var intervalID = setInterval(function () {
@@ -323,18 +305,9 @@ function startTimer(duration) {
     }, 1000);
     return intervalID
 }
-
+// Stop timer after its run once
 function stopTimer(intervalID)
 {
     clearInterval(intervalID);
     document.querySelector('#time').textContent = "00:00";
-
-
 }
-
-
-// window.onload = function () {
-//     var fiveMinutes = 60 * 1.5,
-//         display = document.querySelector('#time');
-//     startTimer(fiveMinutes, display);
-// };

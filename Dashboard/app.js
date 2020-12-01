@@ -221,9 +221,16 @@ function collect_data()
       );
 
       
-        var fiveMinutes = 60 * 1.5,
-        display = document.querySelector('#time');
-        startTimer(fiveMinutes, display);
+    var fiveMinutes = 60 * 1.5;
+    var intervalID = startTimer(fiveMinutes);
+    function stopTimerCallback()
+    { 
+        stopTimer(intervalID)
+    }
+        
+    setTimeout(stopTimerCallback, 90000)
+
+
     
     
     // Load render_results function after 90seconds
@@ -253,22 +260,32 @@ async function render_results(url)
 
 }
 
-function startTimer(duration, display) {
+function startTimer(duration) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    var intervalID = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+        document.querySelector('#time').textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
             timer = duration;
         }
     }, 1000);
+    return intervalID
 }
+
+function stopTimer(intervalID)
+{
+    clearInterval(intervalID);
+    document.querySelector('#time').textContent = "00:00";
+
+
+}
+
 
 // window.onload = function () {
 //     var fiveMinutes = 60 * 1.5,

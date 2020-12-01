@@ -1,3 +1,5 @@
+https://asadca4u.github.io/Final_Project_Group_Five/
+
 # Prediction of Diabetes
 Diabetes, a chronic metabolic disorder, is one of the fastest growing diseases regardless of geographic, racial, or ethnic context. There are two types of disbetes: Type I and Type II. 
 - Type I diabetes happens when the pancreatic beta cells produce either very little insulin or no insulin.

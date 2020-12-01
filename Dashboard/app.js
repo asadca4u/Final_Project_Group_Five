@@ -219,6 +219,59 @@ function collect_data()
           return alert("There was an error uploading your file: ", err.message);
         }
       );
+
+      
+        var fiveMinutes = 60 * 1.5,
+        display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+    
+    
+    // Load render_results function after 90seconds
+    setTimeout(render_results, 90000);
 }
 
+async function fetch_results(url) 
+{
+    try {
+        let response = await fetch('https://diabetesmodelresults.s3.us-east-2.amazonaws.com/prediction.json', {
+            method: 'GET',
+            credentials: 'same-origin'
+        });
+        let result = await response.json();
+        return result;
+    } catch (error) {
+        console.error(error);
+    }
+}
 
+async function render_results(url) 
+{
+    let result = await fetch_results('https://diabetesmodelresults.s3.us-east-2.amazonaws.com/prediction.json')
+    console.log(result);
+
+    document.getElementById("jsonData").innerHTML = "<pre>"+JSON.stringify(result,undefined, 2) +"</pre>"
+
+}
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+// window.onload = function () {
+//     var fiveMinutes = 60 * 1.5,
+//         display = document.querySelector('#time');
+//     startTimer(fiveMinutes, display);
+// };

@@ -235,8 +235,11 @@ function collect_data()
     
     // Load render_results function after 90seconds
     setTimeout(render_results, 90000);
+    // Load render_features function after 90seconds
+    setTimeout(render_features, 90000);
 }
 
+// fetch the prediction data
 async function fetch_results(url) 
 {
     try {
@@ -259,6 +262,49 @@ async function render_results(url)
     document.getElementById("jsonData").innerHTML = "<pre>"+JSON.stringify(result,undefined, 2) +"</pre>"
 
 }
+
+
+
+
+
+
+
+// Fetch the analysis of features
+async function fetch_features(url1) 
+{
+    try {
+        let response1 = await fetch('https://diabetesmodelresults.s3.us-east-2.amazonaws.com/importance_of_features.json', {
+            method: 'GET',
+            credentials: 'same-origin'
+        });
+        let feature = await response1.json();
+        return feature;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function render_features(url1) 
+{
+    let feature = await fetch_features('https://diabetesmodelresults.s3.us-east-2.amazonaws.com/importance_of_features.json')
+    console.log(feature);
+
+    document.getElementById("jsonFeature").innerHTML = "<pre>"+JSON.stringify(feature,undefined, 2) +"</pre>"
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function startTimer(duration) {
     var timer = duration, minutes, seconds;

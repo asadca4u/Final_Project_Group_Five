@@ -136,23 +136,32 @@ The importance of features is relatively consistent across groups, with Polyuria
 ## Dashboard
 The dashboard is a place to display the results of the analysis and to provide a place for the user to interact with the data. Since we are attempting to build an application that predicts instances of diabetes, the dashboard will provide the user with input fields to answer yes or no questions about the 16 different features. This data will be pushed to the database, where it can be accessed by the machine learning model. The machine learing model returns a prediction, based on the 16 factors, as to whether the individual is at risk or not at risk for diabetes. This is pushed back into the dashboard, where there are multiple graphs depicting where their data point stands in relation to all the other samples. 
 
-Tools:
-D3 JavaScript, HTML elements, Plotly, and JavaScript.
-
-The JavaScript was used to create the script to connect the function for dropdown menu and bar chart.
--	D3.json method used to read diabetess.JSON file
--	Selector to create select function to add value into the interactive drop-down fields in index.html
--	Function init () to initiate the dashboard
--	Function buildCharts(age) to create the data for charts
--	Plotly function to create analytical charts for diabetes dataset
-
-The HTML elements to create index.HTML file and the interactive fields
--	`<head>` to show the heading on top
--	`<class=” row>` used to create the rows in the web page
--	`<class=” col-md-8”>` to size the columns to fit in page
--	`<class=” well”>` used to create the drop-down menu
--	`<p>` to add a paragraph about the Topic “Diabetes”
--	`<select>` element to connect the function created in JavaScript.
+- Input takes data from user and adds it to the database as a new row in a User_Input table
+- This user input is run through the most accurate ML model, and returns a classification of at risk or not at risk
+    1. HTML form with JS application
+        - JS function extracts data from the HTML form and organizes it into a JS object using an object constructor function
+        - JS object is converted to JSON and stored in a variable, using JSON.stringify()
+    2.  AWS pipeline 
+        - Part A: Dashboard to S3 Bucket
+            - S3 Bucket and associated access point are created, and their Cross-origin resource sharing (CORS) is configured in order to define the manner in which the client web application will interact with the AWS server. 
+            - Using AWS SDK for JavaScript in Browsers, a connection was created through the S3 access point, the SDK itself is imported via a script tag in the HTML code.
+            - This connection was leveraged to upload the JSON data to the S3 bucket, overwriting the file each time a new form is submitted. 
+            - In order to allow the communication to occur through the access point, the Amazon Cognito service was configured to create a new identity pool, which allows the script in the browser to obtain AWS access credentials.
+            - These access credentials were obtained using the Amazon IAM service, which provides an AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY, which are then stored as environmental variables for access by the SDK. 
+        - Part B: S3 Bucket to PostgreSQL database
+            - Using AWS Lambda, a lambda function was created that is triggered by the user input data being updated on the S3 bucket, as a result of the HTML form being submitted. 
+            - This lambda function was coupled with 2 layers, one was the AWSLambda-Python36-SciPy1x layer provided by AWS, and the second was a custom layer containing relevant dependencies like pandas, psycopg2, SQLAlchemy and s3fs. 
+            - The custom layer was created using an AWS Cloud9 Linux environment, in which a virtual environment was created, and all the relevant dependencies installed. This was zipped up and exported to AWS Lambda as a custom layer. 
+            - The Lambda function itself is a simple script that imports the JSON data, which was exported by the client side to the S3 bucket, as a pandas dataframe. It then creates an SQLAlchemy connection with the project database, and exports the dataframe to the PostgreSQL database. 
+            - All of this is rigged to occur automatically the moment the ‘Submit’ button is clicked in the HTML form. 
+        - Part C: PostgreSQL database to ML-Model
+            - A second AWS Lambda function was created to extract the user input data from the database and pass it through a Random Forest model to return a prediction. 
+            - The lambda function uses SQL Alchemy in order to connect to the PostgreSQL database, where the data was uploaded from the previous Lambda Function. This data is passed through the Random Forest model, which is trained on the entire set of data held in the table all_data in the database. 
+            - The model returns a prediction based on the sixteen features that were provided by the user in the HTML form, this prediction, as well as an importance of features analysis is pushed into a second S3 bucket. 
+            - The lambda function itself is set to trigger upon the successful completion of the first lambda function, which is detected by the second function based on a message sent to the AWS simple notification service (SNS) by the first function when it is completed successfully. The second function will not trigger upon an unsuccessful  attempt to run the first function. 
+        - Part D: Return the results
+            - The prediction from the machine learning model, as well as its analysis of features was uploaded to a second S3 bucket in the second lambda function as JSON files.
+            - These JSON files are downloaded by the script in the dashboard, using a fetch(url) function and are then displayed by the dashboard, in their raw JSON form. 
   
    
 

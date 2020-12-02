@@ -167,6 +167,9 @@ The dashboard is a place to display the results of the analysis and to provide a
 
 ![Dashboard](https://github.com/asadca4u/Final_Project_Group_Five/blob/main/Images/Dashboard1.png)
 
+
+![Dashboard Architecture](Dashboard Architecture.png)
+
 ## References
 
 1. https://www.diabetes.ca/en-CA/about-diabetes.

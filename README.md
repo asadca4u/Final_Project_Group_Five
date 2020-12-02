@@ -1,6 +1,6 @@
-Access our Dashboard from the following link:
+[Access our Dashboard](https://asadca4u.github.io/Final_Project_Group_Five/)
 
-https://asadca4u.github.io/Final_Project_Group_Five/
+[Access our Presentation](https://docs.google.com/presentation/d/1dsuO6mXq4usG-t-wahd12MQy8CVVl8-gE_ZYVzrfZTk/edit?usp=sharing)
 
 # Prediction of Diabetes
 Diabetes, a chronic metabolic disorder, is one of the fastest growing diseases regardless of geographic, racial, or ethnic context. There are two types of disbetes: Type I and Type II. 
@@ -173,11 +173,5 @@ The dashboard is a place to display the results of the analysis and to provide a
 2. https://www.albertadiabetesfoundation.com/type-2-diabetes?gclid=CjwKCAiAqJn9BRB0EiwAJ1SztWQsJPkJ0cSmIA5_mo6FY-YJaOfQ3yL8lVYJY2vqKnNk5ba-Uz8mpRoC2YkQAvD_BwE.
 3. https://www.jdrf.ca/who-we-are/type-1-diabetes/.
 4. https://www.canada.ca/en/public-health/services/publications/diseases-conditions/diabetes-canada-highlights-chronic-disease-surveillance-system.html.
-5. https://www.diabetes.co.uk/category/diagnosis/symptoms/.
-
-  
-## Here is link for google slides:
-  
-  
-https://docs.google.com/presentation/d/1YGDOCTAkfTfM0VePJZZyJXRTV5fqOcid8A-qVAKfu1Y/edit?usp=sharing.
-
+5. https://www.diabetes.co.uk/category/diagnosis/symptoms/.  
+ 

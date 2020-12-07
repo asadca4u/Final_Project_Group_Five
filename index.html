@@ -27,142 +27,61 @@
       <div class="col-md-16 jumbotron text-center" >
         
         <h1 style="color:black"><b> Diabetes Machine Learning</b></h1>
-        <p style="color:black">Predicting Instances of Type II Diabetes using a Random Forest Model</p>
       </div>
     </div>
-    <div class="row">
+    
+    <div class="container">
       <p><h4 style="text-align:justify">
-        Welcome to the Type II Diabetes Machine Learning Dashboard. This application uses a random forest classification model to predict 
-        instances of diabetes based on individual user input. Use the form below to provide the model with your data, and watch as the machine learning model 
-        predicts whether or not you are at risk for Type II Diabates. The application takes approximately 90 seconds to return the results from clicking the 
-        'Submit' button. Do not refresh the page in this time, or your input will be lost. 
+        Predicting of Instances of Type II Diabetes
       </h4></p>
+
+      <p><h3 style="text-align:justify">
+        Diabetes, a chronic metabolic disorder, is one of the fastest growing diseases regardless of geographic, 
+        racial, or ethnic context. There are two types of disbetes: Type I and Type II.
+
+        Type I diabetes happens when the pancreatic beta cells produce either very little insulin or no insulin.
+
+        Type II dibetes happens when the body becomes insulin resistant.
+
+        The common symptoms for Type I diabetes are sudden weight loss, dehydration, delayed healing, 
+        blurred vision and Type II have similar symptoms or no symptoms at all depending on each body's idiosyncratic 
+        reactions. [1, 2]. Type I diabetes strikes both kids and adults at any age, while Type II diabetes is generally 
+        seen later in life. There is no cure for diabetes but it can be managed if it is diagnosed in the early stages. 
+        Type I diabetes can be managed by medication such as insulin and Type II can be managed via a balanced diet, 
+        excercise and a healthy lifestyle. In this project, we will be dealing exclusively with data about Type II 
+        diabetic patients.
+      </h3></p>
+
+      <p><h4 style="text-align:justify">
+        Description of Dataset
+      </h4></p>
+
+      <p><h3 style="text-align:justify">
+        The dataset contains a record of 16 attributes about each of 520 patients, which may be correlated with 
+        their diabetic status, or "class". The data is entered as either "Yes" or "No" for each of the 14 health 
+        related factors, and is entered as "Positive" or "Negative" in its classification of whether or not the 
+        individual patient (represented by a single row) has diabetes. The data was collected from the patients in 
+        the Sylhet Diabetes Hospital of Sylhet, Bangladesh.
+      </h3></p>
+
+      <center>
+        <img src="Images/Dataset.png" alt="Accuracy" style="width:1150px;height:450px;">
+      </center>
+
+      <p><h4 style="text-align:justify">
+        Questions to Consider
+      </h4></p>
+
+      <p><h3 style="text-align:justify">
+      To what extent can a machine-learning model predict whether or not a patient is at risk of diabetes based on 16 different health and demographic attributes? 
+      </h3></p>
+
+      <p><h3 style="text-align:justify">
+      Is such a model useful for classifying patients in a clinical setting so that preventative and if nescessary, therapeutic measures may be implemented?
+      </h3></p>
+
+          
     </div>
-    <div class="row" >
-        <div class="col-md-4">
-            <p> What is your age? </p>
-            <input type="number" id="age" name="age" min="16" max="100">
-            <label for="age">years old</label><br>
-
-            <p> What is your height in inches and weight in pounds? </p>
-            <input type="number" id="height" name="BMI">
-            <label for="height">Height (in)</label><br>
-            <input type="number" id="weight" name="BMI">
-            <label for="weight">Weight (lbs)</label><br>
-
-            <p> What is your gender? </p>
-            <input type="radio" id="male" name="gender" value="1">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="0">
-            <label for="female">Female</label><br>
-
-            <p> Do you experience polyuria? </p>
-            <input type="radio" id="yes1" name="polyuria" value=1>
-            <label for="yes1">Yes</label><br>
-            <input type="radio" id="no1" name="polyuria" value=0>
-            <label for="no1">No</label><br>
-
-            <p> Do you experience polydipsia? </p>
-            <input type="radio" id="yes2" name="polydipsia" value=1>
-            <label for="yes2">Yes</label><br>
-            <input type="radio" id="no2" name="polydipsia" value=0>
-            <label for="no2">No</label><br>
-
-            <p> Have you experienced any sudden weight loss? </p>
-            <input type="radio" id="yes3" name="weight-loss" value=1>
-            <label for="yes3">Yes</label><br>
-            <input type="radio" id="no3" name="weight-loss" value=0>
-            <label for="no3">No</label><br>
-
-            <p> Are you easily irritable? </p>
-            <input type="radio" id="yes4" name="irritability" value=1>
-            <label for="yes4">Yes</label><br>
-            <input type="radio" id="no4" name="irritability" value=0>
-            <label for="no4">No</label><br>
-
-            <p> Do you experience any form of paresis? </p>
-            <input type="radio" id="yes5" name="paresis" value=1>
-            <label for="yes5">Yes</label><br>
-            <input type="radio" id="no5" name="paresis" value=0>
-            <label for="no5">No</label><br>
-
-            <p> Do you experience polyphagia? </p>
-            <input type="radio" id="yes6" name="polyphagia" value=1>
-            <label for="yes6">Yes</label><br>
-            <input type="radio" id="no6" name="polyphagia" value=0>
-            <label for="no6">No</label><br>
-
-            <p> Do you experience alopecia? </p>
-            <input type="radio" id="yes7" name="alopecia" value=1>
-            <label for="yes7">Yes</label><br>
-            <input type="radio" id="no7" name="alopecia" value=0>
-            <label for="no7">No</label><br>
-
-            <p> Do you experience any visual blurring? </p>
-            <input type="radio" id="yes8" name="vision" value=1>
-            <label for="yes8">Yes</label><br>
-            <input type="radio" id="no8" name="vision" value=0>
-            <label for="no8">No</label><br>
-
-            <p> Do you experience delayed healing from minor injuries? </p>
-            <input type="radio" id="yes9" name="healing" value=1>
-            <label for="yes9">Yes</label><br>
-            <input type="radio" id="no9" name="healing" value=0>
-            <label for="no9">No</label><br>
-
-            <p> Do you experience excessive amounts of itching? </p>
-            <input type="radio" id="yes10" name="itching" value=1>
-            <label for="yes10">Yes</label><br>
-            <input type="radio" id="no10" name="itching" value=0>
-            <label for="no10">No</label><br>
-
-            <p> Do you experience any muscle stiffness? </p>
-            <input type="radio" id="yes11" name="stiffness" value=1>
-            <label for="yes11">Yes</label><br>
-            <input type="radio" id="no11" name="stiffness" value=0>
-            <label for="no11">No</label><br>
-
-            <p> Do you experience any genital thrush? </p>
-            <input type="radio" id="yes12" name="thrush" value=1>
-            <label for="yes12">Yes</label><br>
-            <input type="radio" id="no12" name="thrush" value=0>
-            <label for="no12">No</label><br>
-
-            <p> Do you experience any general weakness? </p>
-            <input type="radio" id="yes13" name="weakness" value=1>
-            <label for="yes13">Yes</label><br>
-            <input type="radio" id="no13" name="weakness" value=0>
-            <label for="no13">No</label><br>
-
-            <button onclick="collect_data()" id="btn1">Submit</button>           
-          </div>
-
-          <div class="col-md-8">
-            <div>
-              <p>
-                This JSON element displays all the input you provided earlier, where 'Yes'=1 and 'No'=0 and 'Male'=1 and 'Female'=0. 
-              </p>
-              <p>
-                Note Classification at the bottom; this is the Random Forest Model's prediction of your diabetic risk status. 
-              </p>
-              <p>
-                Classification: 'At Risk'=1 and 'Not At Risk'=0.
-              </p>
-
-              <div style="font-weight: bold">Results will be returned in <span id="time">01:30</span> minutes:</div>
-
-              <div id="jsonData"></div>
-
-              <p>
-                Once the results are loaded, you will find an importance of features analysis below. This is a report generated by the machine learning model about how much each input 
-                feature contributed to the model's predictive power. The scores all together add up to a value of 1. 
-              </p>
-              
-              <div id="jsonFeature"></div>
-            </div>
-          </div>
-        </div>
-      </div>
       
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -172,7 +91,12 @@
 </body>
 
 <footer>
-  *FOOTER*
+  <center>
+      <img src="Images/Gears.png" alt="Footer" style="width:1100px;height:425px;">
+  </center>
+      <h4 style="text-align:center">     
+          <a href="#top">Back to top</a>
+      </h4>
 </footer>
 
 </html>

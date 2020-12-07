@@ -311,3 +311,5 @@ function stopTimer(intervalID)
     clearInterval(intervalID);
     document.querySelector('#time').textContent = "00:00";
 }
+
+
